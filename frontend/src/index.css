@@ -1,0 +1,96 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* German SaaS Invoice App - Warm & Trustworthy Color Palette */
+
+@layer base {
+  :root {
+    --background: 48 20% 97%; /* Warm beige background */
+    --foreground: 220 15% 20%; /* Dark blue-gray text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 20%;
+
+    --primary: 210 60% 65%; /* Pastel blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 48 35% 92%; /* Light beige */
+    --secondary-foreground: 220 15% 20%;
+
+    --muted: 48 25% 90%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 210 45% 85%; /* Very light pastel blue */
+    --accent-foreground: 220 15% 20%;
+
+    --destructive: 0 65% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 48 20% 88%;
+    --input: 48 20% 88%;
+    --ring: 210 60% 65%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 48 20% 97%;
+    --sidebar-foreground: 220 15% 20%;
+    --sidebar-primary: 210 60% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 48 35% 92%;
+    --sidebar-accent-foreground: 220 15% 20%;
+    --sidebar-border: 48 20% 88%;
+    --sidebar-ring: 210 60% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-size: 18px; /* Larger base font for older users */
+  }
+
+  /* Large, clear buttons for mobile-first */
+  .btn-large {
+    @apply px-8 py-4 text-xl font-semibold rounded-xl min-h-[60px] touch-manipulation;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border;
+  }
+
+  /* Mobile-first responsive text */
+  .text-display {
+    @apply text-3xl sm:text-4xl font-bold;
+  }
+
+  .text-heading {
+    @apply text-2xl sm:text-3xl font-semibold;
+  }
+
+  .text-large {
+    @apply text-xl sm:text-2xl;
+  }
+
+  /* Card styling for warm, trustworthy feel */
+  .warm-card {
+    @apply bg-card border border-border rounded-2xl p-6 shadow-sm;
+  }
+
+  /* Input styling for better accessibility */
+  .input-large {
+    @apply px-4 py-3 text-lg rounded-xl border border-input bg-background;
+  }
+}
